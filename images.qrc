@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/aeolus-logo.png</file>
+	<file>images/aeolus-logo60*60.png</file>
+    </qresource>
+</RCC>

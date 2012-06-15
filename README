@@ -1,3 +1,0 @@
-For running the application you need to have Qt libraries , if you are working on KDE then I think you already will be having sufficient libraries .
-Then you need to compile command.c file once to generate its corresponding object file used by the application .
-you can install Qt-creator and can open the aeolus.pro file in that , after which all you got to do is simply run the application .

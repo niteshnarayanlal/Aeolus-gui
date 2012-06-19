@@ -1,6 +1,5 @@
 aeolus-gui is an gui desktop end application for Aeolus which is been made to provide an easy to use interface to the user .
 For running the application you need to have Qt libraries .
-Then you need to compile command.c file once to generate its corresponding object file used by the application .
 
 To install Qt-libraries
 -yum install qt qt-devel

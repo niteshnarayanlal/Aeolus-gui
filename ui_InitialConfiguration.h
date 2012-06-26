@@ -36,25 +36,22 @@ public:
     {
         if (InitialConfiguration->objectName().isEmpty())
             InitialConfiguration->setObjectName(QString::fromUtf8("InitialConfiguration"));
-        InitialConfiguration->resize(521, 384);
+        InitialConfiguration->resize(506, 386);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/images/aeolus-logo60*60.png"), QSize(), QIcon::Normal, QIcon::Off);
         InitialConfiguration->setWindowIcon(icon);
-        InitialConfiguration->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"font-weight: bold;\n"
-"font-size: 15px;\n"
-"}\n"
-"background: QLinearGradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #eef, stop: 1 #ccf);\n"
-"QLineEdit {\n"
+        InitialConfiguration->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"
 "}\n"
-"\n"
-"QPushButton {\n"
-"color: white;\n"
-"background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
+"QCommandLinkButton\n"
+"{\n"
+"}\n"
+"QDialog\n"
+"{\n"
+"background: QLinearGradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #eef, stop: 1 #ccf);\n"
 "border-width: 1px;\n"
 "border-color: #339;\n"
 "border-style: solid;\n"
@@ -63,25 +60,37 @@ public:
 "font-size: 10px;\n"
 "padding-left: 5px;\n"
 "padding-right: 5px;\n"
-"min-width: 50px;\n"
-"max-width: 50px;\n"
-"min-height: 13px;\n"
-"max-height: 13px;\n"
+"\n"
 "}\n"
 "\n"
-""));
+"QPushButton {\n"
+"color: white;\n"
+"background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #28d, stop: 0.1 #39e, stop: 0.49 #47c, stop: 0.5 #66b, stop: 1 #77c);\n"
+"border-width: 1px;\n"
+"border-color: #339;\n"
+"border-style: solid;\n"
+"border-radius: 7;\n"
+"padding: 3px;\n"
+"font-size: 10px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 70px;\n"
+"max-width:70px;\n"
+"min-height: 17px;\n"
+"max-height: 17px;\n"
+"}"));
         headerLabel = new QLabel(InitialConfiguration);
         headerLabel->setObjectName(QString::fromUtf8("headerLabel"));
         headerLabel->setGeometry(QRect(210, 200, 111, 31));
         bodyLabel = new QLabel(InitialConfiguration);
         bodyLabel->setObjectName(QString::fromUtf8("bodyLabel"));
-        bodyLabel->setGeometry(QRect(50, 240, 451, 20));
+        bodyLabel->setGeometry(QRect(90, 240, 451, 20));
         bottomLabel = new QLabel(InitialConfiguration);
         bottomLabel->setObjectName(QString::fromUtf8("bottomLabel"));
         bottomLabel->setGeometry(QRect(140, 360, 351, 21));
         bottomIcon = new QPushButton(InitialConfiguration);
         bottomIcon->setObjectName(QString::fromUtf8("bottomIcon"));
-        bottomIcon->setGeometry(QRect(90, 340, 51, 51));
+        bottomIcon->setGeometry(QRect(50, 350, 82, 25));
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/images/aeolus-logo.png"), QSize(), QIcon::Normal, QIcon::Off);
         bottomIcon->setIcon(icon1);
@@ -91,7 +100,7 @@ public:
         changingLabel->setGeometry(QRect(130, 300, 251, 20));
         loadingLabel = new QLabel(InitialConfiguration);
         loadingLabel->setObjectName(QString::fromUtf8("loadingLabel"));
-        loadingLabel->setGeometry(QRect(210, 270, 101, 16));
+        loadingLabel->setGeometry(QRect(220, 270, 101, 16));
         label = new QLabel(InitialConfiguration);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(150, -40, 301, 271));

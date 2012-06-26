@@ -16,6 +16,25 @@ void Login::connections()
 
 }
 
+/*
+
+void Login::replyFinished(QNetworkReply * reply)
+{
+    qDebug()<<reply->readAll();
+    if(reply->error()==QNetworkReply::NoError)
+        qDebug()<<"\n Authentication Done";
+    else if(reply->error()==QNetworkReply::AuthenticationRequiredError)
+        qDebug()<<"\n Wrong Credentials ";
+
+
+    reply->deleteLater();
+}
+void onError(QNetworkReply::NetworkError networkError)
+{
+    qDebug()<<"\n code is :"<<networkError;
+}
+
+*/
 
 void Login::checkBoxImplementation()
 {
@@ -31,8 +50,8 @@ void Login::checkBoxImplementation()
 void Login::authenticate()
 {
 
-    QString userName=userNameLineEdit->text();
-    QString password=passwordLineEdit->text();
+    userName=userNameLineEdit->text();
+    password=passwordLineEdit->text();
     QString command="curl -k --user "+ userName+":"+password + " https://localhost/conductor/providers";
     qDebug()<<command;
     QByteArray commandBA = command.toLocal8Bit();
@@ -62,6 +81,22 @@ void Login::authenticate()
         message.setText("Login Successful");
         message.show();
     }
+
+    /*
+    QString concatenated = userName + ":" + password;
+    QByteArray data = concatenated.toLocal8Bit().toBase64();
+    QString headerData = "Basic " + data;
+    request.setRawHeader("Authorization", headerData.toLocal8Bit());;
+    qDebug()<<data;
+    manager = new QNetworkAccessManager();
+    request.setUrl(QUrl("http://localhost/conductor/providers"));
+    QNetworkReply *rep=manager->get(request);
+    connect(manager, SIGNAL(finished(QNetworkReply*)),
+        this, SLOT(replyFinished(QNetworkReply*)));
+
+    connect(rep,SIGNAL(error(QNetworkReply::NetworkError)),SLOT(onError(QNetworkReply::NetworkError)),Qt::QueuedConnection);
+
+    */
 
 
 }

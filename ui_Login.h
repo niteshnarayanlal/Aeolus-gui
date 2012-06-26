@@ -44,21 +44,18 @@ public:
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/images/aeolus-logo.png"), QSize(), QIcon::Normal, QIcon::Off);
         Login->setWindowIcon(icon);
-        Login->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"font-weight: bold;\n"
-"font-size: 15px;\n"
-"}\n"
-"background: QLinearGradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #eef, stop: 1 #ccf);\n"
-"QLineEdit {\n"
+        Login->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
 "border: 2px solid gray;\n"
 "border-radius: 8px;\n"
 "}\n"
-"\n"
-"QPushButton {\n"
-"color: white;\n"
-"background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);\n"
+"QCommandLinkButton\n"
+"{\n"
+"}\n"
+"QDialog\n"
+"{\n"
+"background: QLinearGradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #eef, stop: 1 #ccf);\n"
 "border-width: 1px;\n"
 "border-color: #339;\n"
 "border-style: solid;\n"
@@ -67,13 +64,25 @@ public:
 "font-size: 10px;\n"
 "padding-left: 5px;\n"
 "padding-right: 5px;\n"
-"min-width: 50px;\n"
-"max-width: 50px;\n"
-"min-height: 13px;\n"
-"max-height: 13px;\n"
+"\n"
 "}\n"
 "\n"
-""));
+"QPushButton {\n"
+"color: white;\n"
+"background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #28d, stop: 0.1 #39e, stop: 0.49 #47c, stop: 0.5 #66b, stop: 1 #77c);\n"
+"border-width: 1px;\n"
+"border-color: #339;\n"
+"border-style: solid;\n"
+"border-radius: 7;\n"
+"padding: 3px;\n"
+"font-size: 10px;\n"
+"padding-left: 5px;\n"
+"padding-right: 5px;\n"
+"min-width: 70px;\n"
+"max-width:70px;\n"
+"min-height: 17px;\n"
+"max-height: 17px;\n"
+"}"));
         userNameLineEdit = new QLineEdit(Login);
         userNameLineEdit->setObjectName(QString::fromUtf8("userNameLineEdit"));
         userNameLineEdit->setGeometry(QRect(200, 20, 191, 31));
@@ -83,13 +92,13 @@ public:
         passwordLineEdit->setEchoMode(QLineEdit::Password);
         loginPushButton = new QPushButton(Login);
         loginPushButton->setObjectName(QString::fromUtf8("loginPushButton"));
-        loginPushButton->setGeometry(QRect(300, 170, 91, 31));
+        loginPushButton->setGeometry(QRect(300, 170, 82, 25));
         helpPushButton = new QPushButton(Login);
         helpPushButton->setObjectName(QString::fromUtf8("helpPushButton"));
-        helpPushButton->setGeometry(QRect(111, 180, 20, 21));
+        helpPushButton->setGeometry(QRect(111, 180, 82, 25));
         lostPushButton = new QPushButton(Login);
         lostPushButton->setObjectName(QString::fromUtf8("lostPushButton"));
-        lostPushButton->setGeometry(QRect(130, 180, 21, 21));
+        lostPushButton->setGeometry(QRect(130, 180, 82, 25));
         showPasswordCheckBox = new QCheckBox(Login);
         showPasswordCheckBox->setObjectName(QString::fromUtf8("showPasswordCheckBox"));
         showPasswordCheckBox->setGeometry(QRect(200, 110, 181, 31));

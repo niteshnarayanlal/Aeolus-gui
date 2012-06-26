@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Login</class>
- <widget class="QDialog" name="Login">
+ <class>BuildLogin</class>
+ <widget class="QDialog" name="BuildLogin">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>402</width>
-    <height>215</height>
+    <width>442</width>
+    <height>221</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
-  </property>
-  <property name="windowIcon">
-   <iconset resource="images.qrc">
-    <normaloff>:/images/aeolus-logo.png</normaloff>:/images/aeolus-logo.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">QLineEdit {
@@ -58,20 +54,10 @@ min-height: 17px;
 max-height: 17px;
 }</string>
   </property>
-  <widget class="QLineEdit" name="userNameLineEdit">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>20</y>
-     <width>191</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="passwordLineEdit">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>240</x>
      <y>70</y>
      <width>191</width>
      <height>31</height>
@@ -81,75 +67,46 @@ max-height: 17px;
     <enum>QLineEdit::Password</enum>
    </property>
   </widget>
-  <widget class="QPushButton" name="loginPushButton">
+  <widget class="QLabel" name="sideLabel">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>170</y>
-     <width>82</width>
-     <height>25</height>
+     <x>-10</x>
+     <y>0</y>
+     <width>201</width>
+     <height>211</height>
     </rect>
    </property>
    <property name="text">
-    <string>Login</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/aeolus-logo.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="helpPushButton">
+  <widget class="QLineEdit" name="userNameLineEdit">
    <property name="geometry">
     <rect>
-     <x>111</x>
-     <y>180</y>
-     <width>82</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>?</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="lostPushButton">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>180</y>
-     <width>82</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>L</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="showPasswordCheckBox">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>110</y>
-     <width>181</width>
+     <x>240</x>
+     <y>20</y>
+     <width>191</width>
      <height>31</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Show My Password</string>
-   </property>
   </widget>
-  <widget class="QLabel" name="userNameLabel">
+  <widget class="QPushButton" name="submitPushButton">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>30</y>
-     <width>91</width>
-     <height>16</height>
+     <x>330</x>
+     <y>180</y>
+     <width>82</width>
+     <height>25</height>
     </rect>
    </property>
    <property name="text">
-    <string>User Name</string>
+    <string>Submit</string>
    </property>
   </widget>
   <widget class="QLabel" name="passwordLabel">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>140</x>
      <y>80</y>
      <width>81</width>
      <height>16</height>
@@ -159,17 +116,17 @@ max-height: 17px;
     <string>Password</string>
    </property>
   </widget>
-  <widget class="QLabel" name="sideLabel">
+  <widget class="QLabel" name="userNameLabel">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>-60</y>
-     <width>71</width>
-     <height>261</height>
+     <x>140</x>
+     <y>30</y>
+     <width>91</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/aeolus-logo60*60.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>User Name</string>
    </property>
   </widget>
  </widget>

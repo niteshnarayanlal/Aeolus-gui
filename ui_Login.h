@@ -29,12 +29,11 @@ public:
     QLineEdit *userNameLineEdit;
     QLineEdit *passwordLineEdit;
     QPushButton *loginPushButton;
-    QPushButton *helpPushButton;
-    QPushButton *lostPushButton;
     QCheckBox *showPasswordCheckBox;
     QLabel *userNameLabel;
     QLabel *passwordLabel;
     QLabel *sideLabel;
+    QPushButton *backPushButton;
 
     void setupUi(QDialog *Login)
     {
@@ -93,12 +92,6 @@ public:
         loginPushButton = new QPushButton(Login);
         loginPushButton->setObjectName(QString::fromUtf8("loginPushButton"));
         loginPushButton->setGeometry(QRect(300, 170, 82, 25));
-        helpPushButton = new QPushButton(Login);
-        helpPushButton->setObjectName(QString::fromUtf8("helpPushButton"));
-        helpPushButton->setGeometry(QRect(111, 180, 82, 25));
-        lostPushButton = new QPushButton(Login);
-        lostPushButton->setObjectName(QString::fromUtf8("lostPushButton"));
-        lostPushButton->setGeometry(QRect(130, 180, 82, 25));
         showPasswordCheckBox = new QCheckBox(Login);
         showPasswordCheckBox->setObjectName(QString::fromUtf8("showPasswordCheckBox"));
         showPasswordCheckBox->setGeometry(QRect(200, 110, 181, 31));
@@ -111,6 +104,9 @@ public:
         sideLabel = new QLabel(Login);
         sideLabel->setObjectName(QString::fromUtf8("sideLabel"));
         sideLabel->setGeometry(QRect(10, -60, 71, 261));
+        backPushButton = new QPushButton(Login);
+        backPushButton->setObjectName(QString::fromUtf8("backPushButton"));
+        backPushButton->setGeometry(QRect(40, 170, 82, 25));
 
         retranslateUi(Login);
 
@@ -121,12 +117,11 @@ public:
     {
         Login->setWindowTitle(QApplication::translate("Login", "Dialog", 0, QApplication::UnicodeUTF8));
         loginPushButton->setText(QApplication::translate("Login", "Login", 0, QApplication::UnicodeUTF8));
-        helpPushButton->setText(QApplication::translate("Login", "?", 0, QApplication::UnicodeUTF8));
-        lostPushButton->setText(QApplication::translate("Login", "L", 0, QApplication::UnicodeUTF8));
         showPasswordCheckBox->setText(QApplication::translate("Login", "Show My Password", 0, QApplication::UnicodeUTF8));
         userNameLabel->setText(QApplication::translate("Login", "User Name", 0, QApplication::UnicodeUTF8));
         passwordLabel->setText(QApplication::translate("Login", "Password", 0, QApplication::UnicodeUTF8));
         sideLabel->setText(QApplication::translate("Login", "<html><head/><body><p><img src=\":/images/aeolus-logo60*60.png\"/></p></body></html>", 0, QApplication::UnicodeUTF8));
+        backPushButton->setText(QApplication::translate("Login", "Back", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

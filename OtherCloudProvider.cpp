@@ -1,10 +1,11 @@
 #include"OtherCloudProvider.h"
-#include"CloudProviderAccountSetup.h"
 OtherCloudProvider::OtherCloudProvider()
 {
-    //CloudProviderAccountSetup *object=new CloudProviderAccountSetup;
-    //selectedCloudTypeLabel->setText(object->selectedCloudProvider);
+
+  //CloudProviderAccountSetup *object=new CloudProviderAccountSetup;
+  //selectedCloudTypeLabel->setText(object->selectedCloudProvider);
     setupUi(this);
+    this->setWindowTitle("Cloud Provider Account Setup");
     connections();
 }
 

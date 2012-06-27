@@ -2,6 +2,7 @@
 MockCloudProvider::MockCloudProvider()
 {
     setupUi(this);
+    this->setWindowTitle("Mock Cloud Provider Form");
     selectedCloudTypeLabel->setText("mock");
     connections();
 }

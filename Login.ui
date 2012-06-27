@@ -94,32 +94,6 @@ max-height: 17px;
     <string>Login</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="helpPushButton">
-   <property name="geometry">
-    <rect>
-     <x>111</x>
-     <y>180</y>
-     <width>82</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>?</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="lostPushButton">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>180</y>
-     <width>82</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>L</string>
-   </property>
-  </widget>
   <widget class="QCheckBox" name="showPasswordCheckBox">
    <property name="geometry">
     <rect>
@@ -170,6 +144,19 @@ max-height: 17px;
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/aeolus-logo60*60.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backPushButton">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>170</y>
+     <width>82</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back</string>
    </property>
   </widget>
  </widget>

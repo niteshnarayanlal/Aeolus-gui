@@ -1,0 +1,16 @@
+<template> 
+ <name> Fedora 16 Template</name> 
+ <os> 
+ <name>Fedora</name> 
+ <version>16</version> 
+ <arch>x86_64</arch> 
+ <install type='url'> 
+  <url>http://download.fedoraproject.org/pub/fedora/linux/releases/16/Fedora/x86_64/os/</url> 
+ </install> 
+<rootpw>nitesht715</rootpw> 
+ </os> 
+ <description>hey</description>
+ <commands>
+ <command name="F15 updates">yum update -y</command>
+ </commands> 
+ </template>>

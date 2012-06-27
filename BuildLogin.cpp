@@ -1,7 +1,6 @@
 #include"BuildLogin.h"
 #include<QFile>
 #include<QTextStream>
-#include<ServiceProvider.h>
 BuildLogin::BuildLogin()
 {
     setupUi(this);

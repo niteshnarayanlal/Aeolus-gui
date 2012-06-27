@@ -1,6 +1,7 @@
 #ifndef CLOUDPROVIDERACCOUNTSETUP_H
 #define CLOUDPROVIDERACCOUNTSETUP_H
 #include"ui_CloudProviderAccountSetup.h"
+#include"LoggedInDialog.h"
 #include"MockCloudProvider.h"
 #include"OtherCloudProvider.h"
 #include<QDialog>
@@ -11,11 +12,10 @@ public:
     CloudProviderAccountSetup();
     void connections();
     QString selectedCloudProvider;
-private:
-    MockCloudProvider mockObject;
-    OtherCloudProvider otherObject;
+
 private slots:
      void showNext();
+     void back();
 };
 
 #endif // CLOUDPROVIDERACCOUNTSETUP_H

@@ -1,7 +1,6 @@
 #include"BuilderAndPusher.h"
 #include<QFile>
 #include<QTextStream>
-#include<BuildLogin.h>
 BuilderAndPusher::BuilderAndPusher()
 {
 setupUi(this);
@@ -20,12 +19,7 @@ void BuilderAndPusher::executeCommand()
     messageBox.show();
     BuildLogin *object=new BuildLogin();
     object->show();
-
-    //following should be uncommented to run
-    //system("aeolus-image build --target ec2,mock --template template.xml --environment default>> buildOutput.txt ");
-//following should be commented
-    system("aeolus-image build --target ec2,mock --template template.xml >> buildOutput.txt ");
-
+    system("aeolus-image build --target ec2,mock --template template.xml --environment default>> buildOutput.txt ");
 }
 
 void BuilderAndPusher::templateCreator()
@@ -55,10 +49,6 @@ void BuilderAndPusher::templateCreator()
 
     executeCommand();
 
-
-
-    /// WORK PENDING REMOVING ALL THE CREATED FILES template.xml and .aeolus-cli
-
 }
 
 void BuilderAndPusher::submit()
@@ -69,5 +59,8 @@ this->close();
 
 void BuilderAndPusher::back()
 {
+    LoggedInDialog *object=new LoggedInDialog;
+    this->close();
+    object->show();
 
 }

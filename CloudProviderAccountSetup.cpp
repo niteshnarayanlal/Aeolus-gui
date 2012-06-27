@@ -10,31 +10,42 @@ cloudProviderComboBox->addItem("ec2-ap-southeast-1");
 cloudProviderComboBox->addItem("ec2-us-west-2");
 cloudProviderComboBox->addItem("ec2-eu-west-1");
 cloudProviderComboBox->addItem("ec2-us-west-1");
+this->setWindowTitle("Cloud Provider Account Setup");
 
 connections();
 }
 void CloudProviderAccountSetup::connections()
 {
     connect(nextPushButton,SIGNAL(clicked()),this,SLOT(showNext()));
+    connect(backPushButton,SIGNAL(clicked()),this,SLOT(back()));
 }
 void CloudProviderAccountSetup::showNext()
 {
 selectedCloudProvider=cloudProviderComboBox->currentText();
 QString mock="mock";
-bool equivalent= (mock==selectedCloudProvider);
+qDebug()<<"its here now";
 
+bool equivalent= (mock==selectedCloudProvider);
+qDebug()<<equivalent;
 if(equivalent)
   {
-
+  MockCloudProvider *mockObject=new MockCloudProvider;
   qDebug()<<"its in mock";
   this->close();
-  mockObject.show();
+  mockObject->show();
   }
-  else
+else
   {
+  OtherCloudProvider *otherObject=new OtherCloudProvider;
   qDebug()<<"not in mock";
   this->close();
-  otherObject.show();
+  otherObject->show();
   }
 
+}
+void CloudProviderAccountSetup::back()
+{
+LoggedInDialog *object=new LoggedInDialog;
+this->close();
+object->show();
 }

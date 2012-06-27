@@ -1,7 +1,6 @@
 #include"Login.h"
 #include <QDebug>
-#include<QFile>
-
+#include <QFile>
 Login::Login()
 {
     setupUi(this);
@@ -13,28 +12,8 @@ void Login::connections()
 {
    connect(loginPushButton,SIGNAL(clicked()),this,SLOT(authenticate()));
    connect(showPasswordCheckBox,SIGNAL(stateChanged(int)),this,SLOT(checkBoxImplementation()));
-
+   connect(backPushButton,SIGNAL(clicked()),this,SLOT(back()));
 }
-
-/*
-
-void Login::replyFinished(QNetworkReply * reply)
-{
-    qDebug()<<reply->readAll();
-    if(reply->error()==QNetworkReply::NoError)
-        qDebug()<<"\n Authentication Done";
-    else if(reply->error()==QNetworkReply::AuthenticationRequiredError)
-        qDebug()<<"\n Wrong Credentials ";
-
-
-    reply->deleteLater();
-}
-void onError(QNetworkReply::NetworkError networkError)
-{
-    qDebug()<<"\n code is :"<<networkError;
-}
-
-*/
 
 void Login::checkBoxImplementation()
 {
@@ -78,26 +57,17 @@ void Login::authenticate()
     else
     {
 
-        message.setText("Login Successful");
-        message.show();
+        LoggedInDialog *object=new LoggedInDialog;
+        this->close();
+        object->show();
     }
 
-    /*
-    QString concatenated = userName + ":" + password;
-    QByteArray data = concatenated.toLocal8Bit().toBase64();
-    QString headerData = "Basic " + data;
-    request.setRawHeader("Authorization", headerData.toLocal8Bit());;
-    qDebug()<<data;
-    manager = new QNetworkAccessManager();
-    request.setUrl(QUrl("http://localhost/conductor/providers"));
-    QNetworkReply *rep=manager->get(request);
-    connect(manager, SIGNAL(finished(QNetworkReply*)),
-        this, SLOT(replyFinished(QNetworkReply*)));
 
-    connect(rep,SIGNAL(error(QNetworkReply::NetworkError)),SLOT(onError(QNetworkReply::NetworkError)),Qt::QueuedConnection);
-
-    */
-
-
+}
+void Login::back()
+{
+    StartDialog *object=new StartDialog;
+    this->close();
+    object->show();
 }
 

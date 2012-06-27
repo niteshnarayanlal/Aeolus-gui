@@ -28,6 +28,7 @@ public:
     QLabel *cloudProviderLabel;
     QPushButton *nextPushButton;
     QComboBox *cloudProviderComboBox;
+    QPushButton *backPushButton;
 
     void setupUi(QDialog *CloudProviderAccountSetup)
     {
@@ -82,6 +83,9 @@ public:
         cloudProviderComboBox = new QComboBox(CloudProviderAccountSetup);
         cloudProviderComboBox->setObjectName(QString::fromUtf8("cloudProviderComboBox"));
         cloudProviderComboBox->setGeometry(QRect(250, 20, 301, 31));
+        backPushButton = new QPushButton(CloudProviderAccountSetup);
+        backPushButton->setObjectName(QString::fromUtf8("backPushButton"));
+        backPushButton->setGeometry(QRect(10, 70, 82, 25));
 
         retranslateUi(CloudProviderAccountSetup);
 
@@ -93,6 +97,7 @@ public:
         CloudProviderAccountSetup->setWindowTitle(QApplication::translate("CloudProviderAccountSetup", "Dialog", 0, QApplication::UnicodeUTF8));
         cloudProviderLabel->setText(QApplication::translate("CloudProviderAccountSetup", "Select Your Cloud Provider", 0, QApplication::UnicodeUTF8));
         nextPushButton->setText(QApplication::translate("CloudProviderAccountSetup", "Next", 0, QApplication::UnicodeUTF8));
+        backPushButton->setText(QApplication::translate("CloudProviderAccountSetup", "Back", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>CloudProviderAccountSetup</class>
- <widget class="QDialog" name="CloudProviderAccountSetup">
+ <class>LoggedInDialog</class>
+ <widget class="QDialog" name="LoggedInDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>568</width>
-    <height>100</height>
+    <width>411</width>
+    <height>336</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -48,59 +48,62 @@ padding: 3px;
 font-size: 10px;
 padding-left: 5px;
 padding-right: 5px;
-min-width: 70px;
-max-width:70px;
-min-height: 17px;
-max-height: 17px;
+min-width: 100px;
+max-width:100px;
+min-height: 20px;
+max-height: 20px;
 }</string>
   </property>
-  <widget class="QLabel" name="cloudProviderLabel">
+  <widget class="QPushButton" name="builderAndPusherPushButton">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>30</y>
+     <x>150</x>
+     <y>260</y>
+     <width>112</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Image Manager</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cloudProviderAccountSetupPushButton">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>220</y>
+     <width>112</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cloud Provider</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="iconLabel">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>10</y>
      <width>231</width>
-     <height>21</height>
+     <height>211</height>
     </rect>
    </property>
    <property name="text">
-    <string>Select Your Cloud Provider</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/aeolus-logo.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="nextPushButton">
+  <widget class="QPushButton" name="logOutPushButton">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>70</y>
-     <width>82</width>
-     <height>25</height>
+     <x>150</x>
+     <y>300</y>
+     <width>112</width>
+     <height>28</height>
     </rect>
    </property>
    <property name="text">
-    <string>Next</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="cloudProviderComboBox">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>20</y>
-     <width>301</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="backPushButton">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>70</y>
-     <width>82</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Back</string>
+    <string>LogOut</string>
    </property>
   </widget>
  </widget>

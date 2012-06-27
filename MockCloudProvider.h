@@ -8,7 +8,6 @@ class MockCloudProvider:public QDialog , public Ui::MockCloudProvider
 public:
     MockCloudProvider();
     void connections();
-
 private slots:
     void submit();
 };

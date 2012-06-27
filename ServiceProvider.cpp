@@ -1,68 +1,24 @@
 #include"ServiceProvider.h"
-#include"EC2SSHConfigurer.h"
 #include<QDebug>
-#include"Login.h"
 #include<QFile>
 ServiceProvider::ServiceProvider()
 {
     setupUi(this);
+    this->setWindowTitle("Service Provider");
     connections();
 }
 void ServiceProvider::connections()
 {
     connect(okPushButton,SIGNAL(clicked()),this,SLOT(pushImage()));
 }
-/*
-void ServiceProvider::replyFinished(QNetworkReply * reply)
-{
-    if(reply->error()==QNetworkReply::NoError)
-    {
-        qDebug()<<"No error";
-    }
-    else
-        qDebug()<<"error";
-QString data=(QString)reply->readAll();
-qDebug()<<data;
-/*
-QXmlStreamReader xml(data);
-QXmlStreamAttributes attrib;
-        while(!xml.atEnd())
-        {
-            xml.readNextStartElement();
-            if(xml.name()=="name" && !xml.isEndElement())
-            {
-                attrib=xml.attributes();
-                QString name=attrib.value("name").toString();
-                qDebug()<<name;
-            }
-        }
-}
 
-void ServiceProvider::provideAuthenication(QNetworkReply *reply, QAuthenticator*authenticator)
-{
-   Login *ob=new Login();
-
-   authenticator->setUser(ob->userName);
-   authenticator->setPassword(ob->password);
-   qDebug()<<reply->readAll();
-}
-
-*/
 void ServiceProvider::pushImage()
-{/*
-    manager = new QNetworkAccessManager(this);
-    connect(manager, SIGNAL(finished(QNetworkReply*)),
-    this, SLOT(replyFinished(QNetworkReply*)));
-    connect(manager,SIGNAL(authenticationRequired(QNetworkReply*,QAuthenticator*)),
-    SLOT(provideAuthenication(QNetworkReply*,QAuthenticator*)));
-    manager->get(QNetworkRequest(QUrl("https://localhost/conductor/api/provider_accounts.xml")));*/
-
+{
     qDebug()<<"coming here";
     QString accountName=accountNameLineEdit->text();
     QString command="aeolus-image push -A "+accountName+" -t "  ;
     qDebug()<<command;
    //reading the file
-
    QFile file("buildOutput.txt");
    file.open(QIODevice::Text | QIODevice::ReadOnly);
    QTextStream out(&file);
@@ -160,7 +116,6 @@ void ServiceProvider::pushDeployables()
 
     Login *ob=new Login();
     qDebug()<<"here";
-    //qDebug()<<imageId;
     //using curl to push the deployable now
     QString imageID(ID);
     QString command;
@@ -170,8 +125,6 @@ void ServiceProvider::pushDeployables()
     QByteArray commandBA = command.toLocal8Bit();
     const char *commandC = commandBA.data();
     system(commandC);
-
-
     //Asking user to Configure EC2 For SSH
     EC2SSHConfigurer *object=new EC2SSHConfigurer;
     object->show();

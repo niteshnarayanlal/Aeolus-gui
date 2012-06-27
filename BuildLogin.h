@@ -1,10 +1,11 @@
 #ifndef BUILDLOGIN_H
 #define BUILDLOGIN_H
-#include<QDialog>
 #include"ui_BuildLogin.h"
+#include"ServiceProvider.h"
+#include<QDialog>
 class BuildLogin: public QDialog ,public Ui::BuildLogin
 {
-    Q_OBJECT;
+    Q_OBJECT
 public:
     BuildLogin();
     void connections();

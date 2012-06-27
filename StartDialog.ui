@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>CloudProviderAccountSetup</class>
- <widget class="QDialog" name="CloudProviderAccountSetup">
+ <class>StartDialog</class>
+ <widget class="QDialog" name="StartDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>568</width>
-    <height>100</height>
+    <width>409</width>
+    <height>264</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -54,56 +54,48 @@ min-height: 17px;
 max-height: 17px;
 }</string>
   </property>
-  <widget class="QLabel" name="cloudProviderLabel">
+  <widget class="QLabel" name="iconLabel">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>30</y>
+     <x>100</x>
+     <y>10</y>
      <width>231</width>
-     <height>21</height>
+     <height>211</height>
     </rect>
    </property>
    <property name="text">
-    <string>Select Your Cloud Provider</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/aeolus-logo.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="nextPushButton">
+  <widget class="QPushButton" name="loginPushButton">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>70</y>
+     <x>280</x>
+     <y>220</y>
      <width>82</width>
      <height>25</height>
     </rect>
    </property>
    <property name="text">
-    <string>Next</string>
+    <string>Login</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="cloudProviderComboBox">
+  <widget class="QPushButton" name="initialConfigurationPushButton">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>20</y>
-     <width>301</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="backPushButton">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>70</y>
+     <x>40</x>
+     <y>220</y>
      <width>82</width>
      <height>25</height>
     </rect>
    </property>
    <property name="text">
-    <string>Back</string>
+    <string>Initial Conifg</string>
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -27,6 +27,7 @@ public:
     QLabel *iconLabel;
     QPushButton *loginPushButton;
     QPushButton *initialConfigurationPushButton;
+    QLabel *animationLabel;
 
     void setupUi(QDialog *StartDialog)
     {
@@ -81,6 +82,9 @@ public:
         initialConfigurationPushButton = new QPushButton(StartDialog);
         initialConfigurationPushButton->setObjectName(QString::fromUtf8("initialConfigurationPushButton"));
         initialConfigurationPushButton->setGeometry(QRect(40, 220, 82, 25));
+        animationLabel = new QLabel(StartDialog);
+        animationLabel->setObjectName(QString::fromUtf8("animationLabel"));
+        animationLabel->setGeometry(QRect(280, 20, 121, 161));
 
         retranslateUi(StartDialog);
 
@@ -93,6 +97,7 @@ public:
         iconLabel->setText(QApplication::translate("StartDialog", "<html><head/><body><p><img src=\":/images/aeolus-logo.png\"/></p></body></html>", 0, QApplication::UnicodeUTF8));
         loginPushButton->setText(QApplication::translate("StartDialog", "Login", 0, QApplication::UnicodeUTF8));
         initialConfigurationPushButton->setText(QApplication::translate("StartDialog", "Initial Conifg", 0, QApplication::UnicodeUTF8));
+        animationLabel->setText(QString());
     } // retranslateUi
 
 };

@@ -4,6 +4,7 @@
 #include"InitialConfiguration.h"
 #include"Login.h"
 #include<QDialog>
+#include<QAbstractAnimation>
 class StartDialog:public QDialog ,Ui::StartDialog
 {
     Q_OBJECT

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>CloudProviderAccountSetup</class>
- <widget class="QDialog" name="CloudProviderAccountSetup">
+ <class>NewCloudProviders</class>
+ <widget class="QDialog" name="NewCloudProviders">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>571</width>
-    <height>147</height>
+    <width>411</width>
+    <height>234</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -54,47 +54,86 @@ min-height: 17px;
 max-height: 17px;
 }</string>
   </property>
-  <widget class="QLabel" name="cloudProviderLabel">
+  <widget class="QLabel" name="providerNameLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Provider Name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="providerURLLabel">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>70</y>
-     <width>231</width>
-     <height>21</height>
+     <width>131</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Select Your Cloud Provider</string>
+    <string>Provider URL</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="nextPushButton">
+  <widget class="QLabel" name="providerTypeLabel">
    <property name="geometry">
     <rect>
-     <x>470</x>
+     <x>10</x>
      <y>110</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Provider Type</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="xDeltaCloudProviderLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>150</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>X-Deltacloud-Provider</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cloudProviderTypeComboBox">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>100</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="savePushButton">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>180</y>
      <width>82</width>
      <height>25</height>
     </rect>
    </property>
    <property name="text">
-    <string>Next</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="cloudProviderComboBox">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>60</y>
-     <width>301</width>
-     <height>31</height>
-    </rect>
+    <string>Save</string>
    </property>
   </widget>
   <widget class="QPushButton" name="backPushButton">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>110</y>
+     <y>180</y>
      <width>82</width>
      <height>25</height>
     </rect>
@@ -103,30 +142,34 @@ max-height: 17px;
     <string>Back</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="editProvidersPushButton">
+  <widget class="QLineEdit" name="providerNameLineEdit">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>10</y>
-     <width>82</width>
-     <height>25</height>
+     <x>150</x>
+     <y>20</y>
+     <width>241</width>
+     <height>31</height>
     </rect>
-   </property>
-   <property name="text">
-    <string>Edit Providers</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="addProvidersPushButton">
+  <widget class="QLineEdit" name="providerURLLineEdit">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>10</y>
-     <width>82</width>
-     <height>25</height>
+     <x>150</x>
+     <y>60</y>
+     <width>241</width>
+     <height>31</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Add Providers</string>
+  </widget>
+  <widget class="QLineEdit" name="xDeltaCloudProviderLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>140</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
    </property>
   </widget>
  </widget>

@@ -14,8 +14,8 @@ Q_OBJECT
 public:
     Login();
     void connections();
-    QString userName;
-    QString password;
+    static QString userName;
+    static QString password;
 private slots:
       void authenticate();
       void checkBoxImplementation();

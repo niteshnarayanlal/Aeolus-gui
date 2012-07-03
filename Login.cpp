@@ -1,6 +1,8 @@
 #include"Login.h"
 #include <QDebug>
 #include <QFile>
+QString Login::userName="";
+QString Login::password="";
 Login::Login()
 {
     setupUi(this);
@@ -29,8 +31,8 @@ void Login::checkBoxImplementation()
 void Login::authenticate()
 {
 
-    userName=userNameLineEdit->text();
-    password=passwordLineEdit->text();
+    Login::userName=userNameLineEdit->text();
+    Login::password=passwordLineEdit->text();
     QString command="curl -k --user "+ userName+":"+password + " https://localhost/conductor/providers";
     qDebug()<<command;
     QByteArray commandBA = command.toLocal8Bit();

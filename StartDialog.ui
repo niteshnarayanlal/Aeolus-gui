@@ -93,6 +93,19 @@ max-height: 17px;
     <string>Initial Conifg</string>
    </property>
   </widget>
+  <widget class="QLabel" name="animationLabel">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>20</y>
+     <width>121</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="images.qrc"/>

@@ -29,12 +29,14 @@ public:
     QPushButton *nextPushButton;
     QComboBox *cloudProviderComboBox;
     QPushButton *backPushButton;
+    QPushButton *editProvidersPushButton;
+    QPushButton *addProvidersPushButton;
 
     void setupUi(QDialog *CloudProviderAccountSetup)
     {
         if (CloudProviderAccountSetup->objectName().isEmpty())
             CloudProviderAccountSetup->setObjectName(QString::fromUtf8("CloudProviderAccountSetup"));
-        CloudProviderAccountSetup->resize(568, 100);
+        CloudProviderAccountSetup->resize(571, 147);
         CloudProviderAccountSetup->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "padding: 1px;\n"
 "border-style: solid;\n"
@@ -76,16 +78,22 @@ public:
 "}"));
         cloudProviderLabel = new QLabel(CloudProviderAccountSetup);
         cloudProviderLabel->setObjectName(QString::fromUtf8("cloudProviderLabel"));
-        cloudProviderLabel->setGeometry(QRect(10, 30, 231, 21));
+        cloudProviderLabel->setGeometry(QRect(10, 70, 231, 21));
         nextPushButton = new QPushButton(CloudProviderAccountSetup);
         nextPushButton->setObjectName(QString::fromUtf8("nextPushButton"));
-        nextPushButton->setGeometry(QRect(450, 70, 82, 25));
+        nextPushButton->setGeometry(QRect(470, 110, 82, 25));
         cloudProviderComboBox = new QComboBox(CloudProviderAccountSetup);
         cloudProviderComboBox->setObjectName(QString::fromUtf8("cloudProviderComboBox"));
-        cloudProviderComboBox->setGeometry(QRect(250, 20, 301, 31));
+        cloudProviderComboBox->setGeometry(QRect(250, 60, 301, 31));
         backPushButton = new QPushButton(CloudProviderAccountSetup);
         backPushButton->setObjectName(QString::fromUtf8("backPushButton"));
-        backPushButton->setGeometry(QRect(10, 70, 82, 25));
+        backPushButton->setGeometry(QRect(10, 110, 82, 25));
+        editProvidersPushButton = new QPushButton(CloudProviderAccountSetup);
+        editProvidersPushButton->setObjectName(QString::fromUtf8("editProvidersPushButton"));
+        editProvidersPushButton->setGeometry(QRect(360, 10, 82, 25));
+        addProvidersPushButton = new QPushButton(CloudProviderAccountSetup);
+        addProvidersPushButton->setObjectName(QString::fromUtf8("addProvidersPushButton"));
+        addProvidersPushButton->setGeometry(QRect(470, 10, 82, 25));
 
         retranslateUi(CloudProviderAccountSetup);
 
@@ -98,6 +106,8 @@ public:
         cloudProviderLabel->setText(QApplication::translate("CloudProviderAccountSetup", "Select Your Cloud Provider", 0, QApplication::UnicodeUTF8));
         nextPushButton->setText(QApplication::translate("CloudProviderAccountSetup", "Next", 0, QApplication::UnicodeUTF8));
         backPushButton->setText(QApplication::translate("CloudProviderAccountSetup", "Back", 0, QApplication::UnicodeUTF8));
+        editProvidersPushButton->setText(QApplication::translate("CloudProviderAccountSetup", "Edit Providers", 0, QApplication::UnicodeUTF8));
+        addProvidersPushButton->setText(QApplication::translate("CloudProviderAccountSetup", "Add Providers", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

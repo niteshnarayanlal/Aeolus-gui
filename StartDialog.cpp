@@ -1,7 +1,14 @@
 #include"StartDialog.h"
+#include<QMovie>
 StartDialog::StartDialog()
 {
     setupUi(this);
+   /*
+    animationLabel-> setWindowFlags(Qt::FramelessWindowHint);
+    QMovie *movie = new QMovie("icon.gif");
+    animationLabel->setMovie(movie);
+    movie->start();
+    */
     this->setWindowTitle("Aeolus - Image Manager");
     connections();
 

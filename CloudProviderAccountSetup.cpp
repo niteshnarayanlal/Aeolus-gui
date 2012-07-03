@@ -18,6 +18,9 @@ void CloudProviderAccountSetup::connections()
 {
     connect(nextPushButton,SIGNAL(clicked()),this,SLOT(showNext()));
     connect(backPushButton,SIGNAL(clicked()),this,SLOT(back()));
+    connect(editProvidersPushButton,SIGNAL(clicked()),this,SLOT(showEditCloudProvider()));
+    connect(addProvidersPushButton,SIGNAL(clicked()),this,SLOT(showNewCloudProvider()));
+
 }
 void CloudProviderAccountSetup::showNext()
 {
@@ -48,4 +51,16 @@ void CloudProviderAccountSetup::back()
 LoggedInDialog *object=new LoggedInDialog;
 this->close();
 object->show();
+}
+void CloudProviderAccountSetup::showEditCloudProvider()
+{
+    EditCloudProviders *object=new EditCloudProviders;
+    this->close();
+    object->show();
+}
+void CloudProviderAccountSetup::showNewCloudProvider()
+{
+    NewCloudProviders *object=new NewCloudProviders;
+    this->close();
+    object->show();
 }

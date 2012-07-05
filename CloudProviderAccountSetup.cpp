@@ -20,6 +20,8 @@ void CloudProviderAccountSetup::connections()
     connect(backPushButton,SIGNAL(clicked()),this,SLOT(back()));
     connect(editProvidersPushButton,SIGNAL(clicked()),this,SLOT(showEditCloudProvider()));
     connect(addProvidersPushButton,SIGNAL(clicked()),this,SLOT(showNewCloudProvider()));
+    connect(deleteProviderPushButton,SIGNAL(clicked()),this,SLOT(showDeleteProvider()));
+    connect(listProvidersPushButton,SIGNAL(clicked()),this,SLOT(showListProvider()));
 
 }
 void CloudProviderAccountSetup::showNext()
@@ -61,6 +63,18 @@ void CloudProviderAccountSetup::showEditCloudProvider()
 void CloudProviderAccountSetup::showNewCloudProvider()
 {
     NewCloudProviders *object=new NewCloudProviders;
+    this->close();
+    object->show();
+}
+void CloudProviderAccountSetup::showDeleteProvider()
+{
+    DeleteProvider *object=new DeleteProvider;
+    this->close();
+    object->show();
+}
+void CloudProviderAccountSetup::showListProvider()
+{
+    ListProviders *object=new ListProviders;
     this->close();
     object->show();
 }

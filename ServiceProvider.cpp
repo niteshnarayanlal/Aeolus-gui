@@ -121,7 +121,7 @@ void ServiceProvider::pushDeployables()
     //using curl to push the deployable now
     QString imageID(ID);
     QString command;
-    command=" curl --user "+ob->userName+":"+ob->password +" -F \"catalog_id[]=1\" -F \"create_from_image="+imageID+" \" -F \"deployable[name]=soma\" -F \"hardware_profile=1\" http://localhost:3000/deployables";
+    command=" curl --user "+ob->returnUserName()+":"+ob->returnPassword() +" -F \"catalog_id[]=1\" -F \"create_from_image="+imageID+" \" -F \"deployable[name]=soma\" -F \"hardware_profile=1\" http://localhost:3000/deployables";
     command+=">>deployReport.txt";
     qDebug()<<"command is"<<command;
     QByteArray commandBA = command.toLocal8Bit();

@@ -16,6 +16,14 @@ void Login::connections()
    connect(showPasswordCheckBox,SIGNAL(stateChanged(int)),this,SLOT(checkBoxImplementation()));
    connect(backPushButton,SIGNAL(clicked()),this,SLOT(back()));
 }
+QString Login::returnUserName()
+{
+    return Login::userName;
+}
+QString Login::returnPassword()
+{
+    return Login::password;
+}
 
 void Login::checkBoxImplementation()
 {

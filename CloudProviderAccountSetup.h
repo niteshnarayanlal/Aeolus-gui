@@ -6,6 +6,8 @@
 #include"OtherCloudProvider.h"
 #include"EditCloudProviders.h"
 #include"NewCloudProviders.h"
+#include"DeleteProvider.h"
+#include"ListProviders.h"
 #include<QDialog>
 class CloudProviderAccountSetup :public QDialog ,public  Ui::CloudProviderAccountSetup
 {
@@ -20,6 +22,8 @@ private slots:
      void back();
      void showEditCloudProvider();
      void showNewCloudProvider();
+     void showDeleteProvider();
+     void showListProvider();
 };
 
 #endif // CLOUDPROVIDERACCOUNTSETUP_H

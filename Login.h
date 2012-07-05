@@ -10,12 +10,14 @@ class Login:public QDialog,public Ui::Login
 Q_OBJECT
 
     QMessageBox message;
-
+    static QString userName;
+    static QString password;
 public:
     Login();
     void connections();
-    static QString userName;
-    static QString password;
+    QString returnUserName();
+    QString returnPassword();
+
 private slots:
       void authenticate();
       void checkBoxImplementation();

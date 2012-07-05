@@ -31,6 +31,8 @@ public:
     QPushButton *backPushButton;
     QPushButton *editProvidersPushButton;
     QPushButton *addProvidersPushButton;
+    QPushButton *listProvidersPushButton;
+    QPushButton *deleteProviderPushButton;
 
     void setupUi(QDialog *CloudProviderAccountSetup)
     {
@@ -94,6 +96,12 @@ public:
         addProvidersPushButton = new QPushButton(CloudProviderAccountSetup);
         addProvidersPushButton->setObjectName(QString::fromUtf8("addProvidersPushButton"));
         addProvidersPushButton->setGeometry(QRect(470, 10, 82, 25));
+        listProvidersPushButton = new QPushButton(CloudProviderAccountSetup);
+        listProvidersPushButton->setObjectName(QString::fromUtf8("listProvidersPushButton"));
+        listProvidersPushButton->setGeometry(QRect(110, 10, 82, 25));
+        deleteProviderPushButton = new QPushButton(CloudProviderAccountSetup);
+        deleteProviderPushButton->setObjectName(QString::fromUtf8("deleteProviderPushButton"));
+        deleteProviderPushButton->setGeometry(QRect(10, 10, 82, 25));
 
         retranslateUi(CloudProviderAccountSetup);
 
@@ -108,6 +116,8 @@ public:
         backPushButton->setText(QApplication::translate("CloudProviderAccountSetup", "Back", 0, QApplication::UnicodeUTF8));
         editProvidersPushButton->setText(QApplication::translate("CloudProviderAccountSetup", "Edit Providers", 0, QApplication::UnicodeUTF8));
         addProvidersPushButton->setText(QApplication::translate("CloudProviderAccountSetup", "Add Providers", 0, QApplication::UnicodeUTF8));
+        listProvidersPushButton->setText(QApplication::translate("CloudProviderAccountSetup", "List Providers", 0, QApplication::UnicodeUTF8));
+        deleteProviderPushButton->setText(QApplication::translate("CloudProviderAccountSetup", "Delete Providers", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

@@ -28,4 +28,8 @@ Finally launch the 'Aeolus' command in the local checkout directory:
 
 * ./Aeolus
 
+<<<<<<< HEAD
 You can now log on w/ the initial admin account ('admin'/'password') to configure cloud providers, images, and instances right from the desktop!
+=======
+You can now log on w/ the initial admin account ('admin'/'password') to configure cloud providers, images, and instances right from the desktop!
+>>>>>>> a4af254825e957051254e365e9abfdd4af56b279
